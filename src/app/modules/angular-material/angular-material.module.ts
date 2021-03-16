@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
-import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatTableModule} from '@angular/material/table';
+import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import {MatIconModule} from '@angular/material/icon';
 
 const MATERIAL_MODULES = [
   MatCardModule,
@@ -12,7 +14,9 @@ const MATERIAL_MODULES = [
   MatToolbarModule,
   MatButtonModule,
   MatSidenavModule,
-  FormsModule
+  FormsModule,
+  MatTableModule,
+  MatInputModule
 ];
 
 
