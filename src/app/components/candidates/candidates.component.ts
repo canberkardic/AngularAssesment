@@ -15,7 +15,7 @@ export class CandidatesComponent implements OnInit {
   ) { }
 
   users = [];
-  columnsToDisplay = ['name', 'username', 'edit'];
+  columnsToDisplay = ['name', 'username', 'email', 'phone', 'edit'];
 
 
   ngOnInit(): void {

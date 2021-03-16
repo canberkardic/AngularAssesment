@@ -3,18 +3,17 @@ table {
   }
   
   .table-container{
-    position: relative;
-    max-height: 600px;
-    overflow: auto;
+    overflow-x: auto;
+    width: 100%;
+    margin-top: 2em;
   }
-  
   th.mat-header-cell {
     font-size: 16px!important;
     text-align: center;    
     padding: 10px;
     text-align: center;    
     color : black;  
-    background-color: #d1d1d1;
+    background-color: #f3f3f373;
   }
   
   td {
@@ -23,24 +22,16 @@ table {
     text-align: center;
     font-size : 14px!important;
   }
-  
-  :host ::ng-deep .mat-sort-header-container {
-    display: flex;
-    justify-content: center;
+
+  @media all and (min-width: 600px) {
+    .table-container {
+      padding:10px;
+    }
   }
   
-  .active{
-    background-color: green;
+  @media all and (max-width: 600px) {
+    .table-container {
+      padding:30px;
+    }
   }
-  
-  .inactive {
-    background-color: red;
-  }
-  
-  mat-card{
-    width: 100%;  
-    height: 100%;
-  }
-  
-  
   
