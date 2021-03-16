@@ -10,6 +10,7 @@ import { AngularMaterialModule } from './modules/angular-material/angular-materi
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './user.service';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { UserService } from './user.service';
     BrowserAnimationsModule,
     AngularMaterialModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

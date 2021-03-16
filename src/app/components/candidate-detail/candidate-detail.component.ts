@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { IUser } from '../../models/IUser';
 import { UserService } from '../../user.service';
 
 @Component({
@@ -13,8 +14,11 @@ export class CandidateDetailComponent implements OnInit {
     private _userService : UserService
   ) { }
 
+  user : IUser;
+
   ngOnInit(): void {
-    console.log(this._userService.selectedUser);
+    this.user = this._userService.selectedUser;
   }
+  
 
 }

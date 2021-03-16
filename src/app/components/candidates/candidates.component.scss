@@ -3,14 +3,13 @@ table {
   }
   
   .table-container{
+    justify-content: center;
+    align-items: center;
     overflow-x: auto;
-    width: 100%;
     margin-top: 2em;
   }
+  
   th.mat-header-cell {
-    font-size: 16px!important;
-    text-align: center;    
-    padding: 10px;
     text-align: center;    
     color : black;  
     background-color: #f3f3f373;
@@ -18,20 +17,18 @@ table {
   
   td {
     border-left: 1px solid #d4d4d4;
-    padding: 10px;
     text-align: center;
-    font-size : 14px!important;
+  }
+
+  @media all and (max-width: 600px) {
+    .table-container {
+      padding:0px;
+    }
   }
 
   @media all and (min-width: 600px) {
     .table-container {
-      padding:10px;
-    }
-  }
-  
-  @media all and (max-width: 600px) {
-    .table-container {
-      padding:30px;
+      padding:10em;
     }
   }
   

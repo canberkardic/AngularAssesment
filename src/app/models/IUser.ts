@@ -3,8 +3,8 @@ export interface IUser {
     name: string;
     username: string;
     email: string
-    address: object
+    address: any;
     phone: string
     website: string
-    company: object
+    company: any;
 }

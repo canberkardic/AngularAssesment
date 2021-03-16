@@ -1,1 +1,43 @@
-<p>candidate-detail works!</p>
+<div style="display: flex; flex:1; justify-content: center;">
+    <mat-card style="top:100px; width: 40em; ">
+        <mat-card-title>
+            {{user.name}}
+        </mat-card-title>
+
+        <mat-card-subtitle>
+            {{user.username}}
+        </mat-card-subtitle>
+
+        <mat-card-content>
+            <p>
+                Phone : {{user.phone}}
+            </p>
+            <p>
+                Email : {{user.email}}
+            </p>
+            <p>
+                Website : {{user.website}}
+            </p>
+            <span style="display: flex; flex-direction: row;">
+                Adress :  {{user.address.street}}
+                &nbsp;
+                <span>
+                    {{user.address.suite }} 
+                    &nbsp;
+                </span>
+                <span>
+                    {{user.address.city }} 
+                </span>
+
+            </span>
+            <p style="display: flex; flex-direction: row;">
+                Company :  {{user.company.name}}
+                &nbsp;
+                <span>
+                    {{user.company.catchPhrase}} 
+                </span>
+
+            </p>
+          </mat-card-content>
+    </mat-card>
+</div>
