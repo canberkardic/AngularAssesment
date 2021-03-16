@@ -12,17 +12,7 @@ table {
     align-items: center;
     overflow-x: auto;
   }
-  
-  th.mat-header-cell {
-    text-align: center;    
-    color : black;  
-    background-color: #f3f3f373;
-  }
-  
-  td {
-    border-left: 1px solid #d4d4d4;
-    text-align: center;
-  }
+
 
   @media all and (max-width: 600px) {
     .table-container {

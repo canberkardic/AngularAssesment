@@ -11,6 +11,8 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './user.service';
 import { CommonModule } from '@angular/common';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,10 @@ import { CommonModule } from '@angular/common';
     AngularMaterialModule,
     RouterModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    MatSortModule,
+    MatTableModule,
+    BrowserAnimationsModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
