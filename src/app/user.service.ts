@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { apiUrl } from '../environments/environment';
 import { IUser } from './models/IUser';
 
 
@@ -15,7 +16,7 @@ export class UserService {
   selectedUser : IUser;
   
   getAllUsers() {
-    return this._httpClient.get<IUser[]>('https://jsonplaceholder.typicode.com/users');
+    return this._httpClient.get<IUser[]>(apiUrl);
   }
 
 }

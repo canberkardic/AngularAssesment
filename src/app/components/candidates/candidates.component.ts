@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
+import { IUser } from '../../models/IUser';
 import { UserService } from '../../user.service';
 
 @Component({
@@ -14,15 +16,28 @@ export class CandidatesComponent implements OnInit {
     private _router : Router
   ) { }
 
-  users = [];
+  loading : boolean = false;
+  dataSource = new MatTableDataSource<IUser>()
+
   columnsToDisplay = ['name', 'username', 'email', 'phone', 'edit'];
 
 
   ngOnInit(): void {
+    this.loading = true;
     this._userService.getAllUsers().subscribe((data) => {
-      this.users = data;
-    }, (err) => alert(err))
+      this.dataSource.data = data;
+      this.loading = false;
+    }, (err) =>{
+      console.error(err);
+      this.loading = false;
+    })
   }
+
+
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue;
+  }
+
 
   onDetailPressed(selectedUser){
     this._userService.selectedUser = selectedUser;
